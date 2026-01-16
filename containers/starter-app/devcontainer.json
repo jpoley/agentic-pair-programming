@@ -1,13 +1,13 @@
 {
   "name": "starter-app",
-  "image": "ghcr.io/jpoley/images/typescript-node:22",
+  "image": "ghcr.io/jpoley/images/python:3.12",
   "features": {
     "ghcr.io/jpoley/features/github-cli:1": {},
     "ghcr.io/jpoley/features/common-utils:2": {},
     "ghcr.io/jpoley/features/aws-cli:1": {}
   },
   "forwardPorts": [
-    3000
+    8000
   ],
-  "postCreateCommand": "npm install"
+  "postCreateCommand": "pip install -r requirements.txt || true"
 }
